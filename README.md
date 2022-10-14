@@ -1,2 +1,2 @@
 # NEMESIS
-Top down twin stick shooter with an emphasis on combos between weapons and rewards for playing dangerously. 
+Top down twin stick shooter. A newbie pilot flying an old prototype fighter, caught in a undercover operation gone wrong. Fight your way through overwhelming odds, and take down the legendary ship NEMESIS to turn the tides of war.
