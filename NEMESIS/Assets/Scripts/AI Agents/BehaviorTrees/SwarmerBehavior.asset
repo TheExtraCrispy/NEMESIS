@@ -1,0 +1,555 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7705371221864675390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3066d692fc1911b47a035658914bc6fd, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bac64b233b4cf6f4090f935e8b7e9968
+  position: {x: 284, y: 596}
+  description: Lunge at player, if in range, angle, and not cooling down
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  children:
+  - {fileID: 3057162836296109002}
+  - {fileID: -2827424066618798857}
+  - {fileID: -4496986613686134231}
+--- !u!114 &-4912371414115195426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e034e06dc09e6434daba38469a938d38, type: 3}
+  m_Name: RepelFromTagNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5045cf5ff9767c94b909e1aadeb65f5c
+  position: {x: 1494, y: 774}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  radius: 1.84
+  force: 132.2
+  targetTags:
+  - Enemy
+--- !u!114 &-4496986613686134231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3066d692fc1911b47a035658914bc6fd, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d31c4bbc86ad6ca46b3c970eaff1d7a2
+  position: {x: 406.76758, y: 736.99994}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  children:
+  - {fileID: 3329376862527307658}
+  - {fileID: 1232698520601624142}
+  - {fileID: 2963184221568758143}
+--- !u!114 &-4174018433982633584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e034e06dc09e6434daba38469a938d38, type: 3}
+  m_Name: RepelFromTagNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7ffd2d03c508711409e8ee99a4191fcf
+  position: {x: 967, y: 745}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  radius: 1.84
+  force: 107.52
+  targetTags:
+  - Enemy
+--- !u!114 &-3730697687511760235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14639c3bc08cb14984c50ca7ff0710f, type: 3}
+  m_Name: AddForceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9d202f5917c041346bb64c86fc1073b0
+  position: {x: 1319, y: 774}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  force: 500
+--- !u!114 &-3634852863380230610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3066d692fc1911b47a035658914bc6fd, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3b152987f02dfd741b327df4a1896ed2
+  position: {x: 809.095, y: 596.3825}
+  description: Rotate towards target, if they are outside acceptable angle
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  children:
+  - {fileID: 6925647497450032500}
+  - {fileID: 2961442828230953147}
+  - {fileID: -4174018433982633584}
+--- !u!114 &-3092867757928774335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20f5ae100f327345a007b2518bd1bd8, type: 3}
+  m_Name: TargetAngleRangeNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 27e1c096250a74b4db240d7e5b548413
+  position: {x: 722.095, y: 864.3826}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  angleDegrees: 8.93
+--- !u!114 &-2827424066618798857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20f5ae100f327345a007b2518bd1bd8, type: 3}
+  m_Name: TargetAngleRangeNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6de9830a30d206743b8aff5295845514
+  position: {x: 231.99991, y: 731.9998}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  angleDegrees: 19.8
+--- !u!114 &-1833471449422059476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26cab3c1dc8433642881c6eee56f716f, type: 3}
+  m_Name: AboveSpeedNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e96317db8a702bb49a2a3423bdff9532
+  position: {x: 1161, y: 879}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  maxSpeed: 124.45
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef030469d1683841a0cdb5e2296a2ab, type: 3}
+  m_Name: SwarmerBehavior
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 604478036455461071}
+  treeState: 0
+  nodes:
+  - {fileID: 604478036455461071}
+  - {fileID: 4966282404163668506}
+  - {fileID: -3730697687511760235}
+  - {fileID: -1833471449422059476}
+  - {fileID: 2961442828230953147}
+  - {fileID: 7629011262942277486}
+  - {fileID: -3634852863380230610}
+  - {fileID: 6925647497450032500}
+  - {fileID: -3092867757928774335}
+  - {fileID: 1122498951924274239}
+  - {fileID: 3057162836296109002}
+  - {fileID: 156679576666289269}
+  - {fileID: 7691371029123519164}
+  - {fileID: -7705371221864675390}
+  - {fileID: 1232698520601624142}
+  - {fileID: -2827424066618798857}
+  - {fileID: 686536415193737435}
+  - {fileID: -4912371414115195426}
+  - {fileID: -4496986613686134231}
+  - {fileID: 3329376862527307658}
+  - {fileID: -4174018433982633584}
+  - {fileID: 2963184221568758143}
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+--- !u!114 &156679576666289269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c510fbc7732ff4883ccd8aa0263127, type: 3}
+  m_Name: FindTargetNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a4da712080c48d2439d579076ee7ed7f
+  position: {x: -123, y: 779}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  searchRadius: 123.5
+  targetTags:
+  - Player
+--- !u!114 &604478036455461071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a1b1e99407fdd4ebccdb76f5db4040, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: bd5c99f9dabdae644ae5768009c48c96
+  position: {x: 668.0001, y: 217.70004}
+  description: 'Swarmer Behavior
+
+'
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  child: {fileID: 4966282404163668506}
+--- !u!114 &686536415193737435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35a234280adeaf43a9439d58e74fd5d, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 5245022cbb1947d48b91e7f6d3f6c923
+  position: {x: 668, y: 440.31976}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  children:
+  - {fileID: 7691371029123519164}
+  - {fileID: -7705371221864675390}
+  - {fileID: -3634852863380230610}
+  - {fileID: 7629011262942277486}
+--- !u!114 &1122498951924274239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fd1e7b9cbe4b6499b7901fd287d799, type: 3}
+  m_Name: InverterNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cec582825c1903b4d9618011f157481a
+  position: {x: 1161, y: 770}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  child: {fileID: -1833471449422059476}
+--- !u!114 &1232698520601624142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14639c3bc08cb14984c50ca7ff0710f, type: 3}
+  m_Name: AddForceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2067c4208697a6b4d9ee5d8599567547
+  position: {x: 328, y: 864}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  force: 1500
+--- !u!114 &2961442828230953147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16cbed5788b96594b9db44cbcf7d7fa7, type: 3}
+  m_Name: RotateToAngleNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d04d770c485de9644ab11f90dd77a72a
+  position: {x: 809, y: 741}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  _rotationSpeed: 108.39
+--- !u!114 &2963184221568758143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e034e06dc09e6434daba38469a938d38, type: 3}
+  m_Name: RepelFromTagNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 88d58e270fa832c40827b5657e118d8c
+  position: {x: 498, y: 864}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  radius: 1.8
+  force: 120
+  targetTags:
+  - Enemy
+--- !u!114 &3057162836296109002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a26d21e7772054f944c95386417237, type: 3}
+  m_Name: TargetInRangeNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4893e4baca9d0a84f8cbc2a775fb264e
+  position: {x: 74.00001, y: 728.00006}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  radius: 9
+--- !u!114 &3329376862527307658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 797f10c4ec3e38f40a262ef05c1ba0fb, type: 3}
+  m_Name: CooldownNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 47325ffd71800ae40a7d85d182e338e0
+  position: {x: 156, y: 864}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  duration: 3
+--- !u!114 &4966282404163668506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd4ec92b2831fd478532565ecdc00c7, type: 3}
+  m_Name: RepeatNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 1
+  guid: 94afac96491ba9049930004ac7b88d87
+  position: {x: 668.0001, y: 313.70004}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  child: {fileID: 686536415193737435}
+--- !u!114 &6925647497450032500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fd1e7b9cbe4b6499b7901fd287d799, type: 3}
+  m_Name: InverterNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 26ada40b5db26ea4fa01c17304d574a6
+  position: {x: 651, y: 741}
+  description: 
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  child: {fileID: -3092867757928774335}
+--- !u!114 &7629011262942277486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3066d692fc1911b47a035658914bc6fd, type: 3}
+  m_Name: SequencerNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6c6af292b3c13fd4dabf325e05328806
+  position: {x: 1161, y: 620}
+  description: Move forward, accelerating to a max speed
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  children:
+  - {fileID: 1122498951924274239}
+  - {fileID: -3730697687511760235}
+  - {fileID: -4912371414115195426}
+--- !u!114 &7691371029123519164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fd1e7b9cbe4b6499b7901fd287d799, type: 3}
+  m_Name: InverterNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: cfdf61c445692534e9373456273b83df
+  position: {x: -123, y: 634}
+  description: Get reference to player if we dont have one, and they're in range
+  blackboard:
+    targetTransform: {fileID: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
+  child: {fileID: 156679576666289269}
