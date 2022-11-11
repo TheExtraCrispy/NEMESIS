@@ -20,6 +20,11 @@ MonoBehaviour:
   - {fileID: 8126239747008943683}
   - {fileID: 1240080295799518559}
   - {fileID: 3322334241868501212}
+  blackboard:
+    targetObject: {fileID: 0}
+    targetTransform: {fileID: 0}
+    desiredPosition: {x: 0, y: 0}
+    desiredVelocity: {x: 0, y: 0}
 --- !u!114 &1240080295799518559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37,6 +42,12 @@ MonoBehaviour:
   guid: c6a5c44be7e6c154f885aa9d4762ccc9
   position: {x: 161, y: -73}
   description: 
+  blackboard:
+    targetObject: {fileID: 0}
+    targetTransform: {fileID: 0}
+    desiredPosition: {x: 0, y: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
   child: {fileID: 2998594073066940258}
 --- !u!114 &2998594073066940258
 MonoBehaviour:
@@ -55,6 +66,12 @@ MonoBehaviour:
   guid: 702169a23ae024c4d8292e70c7c72ac9
   position: {x: 161, y: 69}
   description: 
+  blackboard:
+    targetObject: {fileID: 0}
+    targetTransform: {fileID: 0}
+    desiredPosition: {x: 0, y: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
   children:
   - {fileID: 8126239747008943683}
   - {fileID: 3322334241868501212}
@@ -73,8 +90,14 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8c35b7af360b9794ea29c741fe444a46
-  position: {x: 257.15997, y: 182.00002}
+  position: {x: 278, y: 182}
   description: 
+  blackboard:
+    targetObject: {fileID: 0}
+    targetTransform: {fileID: 0}
+    desiredPosition: {x: 0, y: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
   message: bruh
 --- !u!114 &5008398141456595310
 MonoBehaviour:
@@ -93,6 +116,12 @@ MonoBehaviour:
   guid: d90daf16a7460a24a979668ea85923d4
   position: {x: 160.99997, y: -190.78969}
   description: 
+  blackboard:
+    targetObject: {fileID: 0}
+    targetTransform: {fileID: 0}
+    desiredPosition: {x: 0, y: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
   child: {fileID: 1240080295799518559}
 --- !u!114 &8126239747008943683
 MonoBehaviour:
@@ -111,4 +140,10 @@ MonoBehaviour:
   guid: 3b85b1011063d8442a9dc90eef1e171a
   position: {x: 40.00201, y: 182.00002}
   description: 
+  blackboard:
+    targetObject: {fileID: 0}
+    targetTransform: {fileID: 0}
+    desiredPosition: {x: 0, y: 0}
+    desiredVelocity: {x: 0, y: 0}
+  agent: {fileID: 0}
   duration: 1

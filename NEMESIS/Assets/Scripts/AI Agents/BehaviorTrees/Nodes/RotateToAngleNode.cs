@@ -15,9 +15,9 @@ public class RotateToAngleNode : ActionNode
 
     protected override State OnUpdate()
     {
-        Vector2 aimDirection = (Vector2)blackboard.targetTransform.position - agent.hostRb.position;
+        Vector2 aimDirection = (Vector2)blackboard.targetObject.transform.position - agent.hostRb.position;
         float targetAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90;
-        agent.hostRb.MoveRotation(Mathf.LerpAngle(agent.transform.rotation.eulerAngles.z, targetAngle, Time.deltaTime * _rotationSpeed));
+        agent.hostRb.MoveRotation(Mathf.LerpAngle(agent.hostRb.rotation, targetAngle, Time.deltaTime * _rotationSpeed));
         return (State.SUCCESS);
     }
 }

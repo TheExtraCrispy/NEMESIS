@@ -12,7 +12,7 @@ public class ContactDamage : MonoBehaviour
     {
         GameObject collidingObject = collision.gameObject;
         if (targetTags.Contains(collidingObject.tag)){
-            collidingObject.GetComponent<Health>().ModifyHealth(-contactDamage);
+            collidingObject.GetComponent<Health>().DamageHealth(contactDamage, "contact");
         }
     }
 }

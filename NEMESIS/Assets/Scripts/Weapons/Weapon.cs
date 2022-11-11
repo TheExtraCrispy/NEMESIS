@@ -15,8 +15,8 @@ public abstract class Weapon : ScriptableObject
     [Space(10)]
 
     [Header("Weapon Stats:")]
-    public float refireDelay;
-    public float timeLastFired;
+    public float timePrimaryLastFired;
+    public float timeAlternateLastFired;
     public bool primaryIsHeld;
     public bool alternateIsHeld;
 

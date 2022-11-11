@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3798146571536078194}
   - component: {fileID: 9166328351419793174}
   - component: {fileID: 2303519500622545166}
-  m_Layer: 0
-  m_Name: TestBullet
-  m_TagString: Untagged
+  m_Layer: 2
+  m_Name: ChaingunBullet
+  m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6911985153680778331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.64, y: 2.2, z: 0}
-  m_LocalScale: {x: 0.068749994, y: 1.7655001, z: 0.3125}
+  m_LocalScale: {x: 0.12117187, y: 1.7655001, z: 0.3125}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,12 +101,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTags:
   - Enemy
+  - PlayerProjectileDamagable
   damage: 10
   impactForce: 329.95
   speed: 118.94
   lifetime: 1
   maxDistance: 0
   pierceCount: 1
+  causeOfDeath: Belter
 --- !u!50 &9166328351419793174
 Rigidbody2D:
   serializedVersion: 4

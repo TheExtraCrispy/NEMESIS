@@ -7,6 +7,7 @@ using UnityEngine.UI;
 [CreateAssetMenu()]
 public class Chaingun : Weapon
 {
+    [Header("Primary Fire")]
     private float heat;
     [SerializeField] GameObject bullet;
     private bool leftOrRight;
@@ -15,13 +16,22 @@ public class Chaingun : Weapon
     [SerializeField] float heatDispersion;
     [SerializeField] float heatDispersionRecovery;
     [SerializeField] float heatSlowdown;
+    [SerializeField] float primaryRefireDelay;
     public float realHeatDispersion;
+    [Space(10)]
+    [Header("Alternate Fire")]
+    [SerializeField] GameObject heatSinkPrefab;
+    [SerializeField] float launchForce;
+    [SerializeField] float damageAtMaxHeat;
+    [SerializeField] float radiusAtMaxHeat;
+    [SerializeField] float forceAtMaxHeat;
+    [SerializeField] float alternateRefireDelay;
 
     private Image heatBar;
     private void Fire()
     {
 
-        if (Time.time >= timeLastFired)
+        if (Time.time >= timePrimaryLastFired)
         {
             Transform firePoint;
             if (leftOrRight)
@@ -36,15 +46,34 @@ public class Chaingun : Weapon
             GameObject projectile = Instantiate(bullet, firePoint.position, firePoint.rotation);
             heat += heatPerShot;
             leftOrRight = !leftOrRight;
-            timeLastFired = Time.time + Mathf.Clamp(refireDelay*(heatSlowdown * (heat / heatMax)), refireDelay, 999);
+            timePrimaryLastFired = Time.time + Mathf.Clamp(primaryRefireDelay*(heatSlowdown * (heat / heatMax)), primaryRefireDelay, 999);
             realHeatDispersion = 0;
+        }
+    }
+
+    private void FireHeatsink()
+    {
+        Debug.Log("ALT FIRE DETECTED");
+        if(Time.time >= timeAlternateLastFired)
+        {
+            Debug.Log("FIRING HEATSINK");
+            Transform firePoint = spinalFirePoint.transform;
+            Heatsink heatSink = Instantiate(heatSinkPrefab, firePoint.position, firePoint.rotation).GetComponent<Heatsink>();
+            float heatFilled = heat / heatMax;
+            heatSink.damage = damageAtMaxHeat * heatFilled;
+            heatSink.force = forceAtMaxHeat * heatFilled;
+            heatSink.radius = radiusAtMaxHeat * heatFilled;
+            heatSink.launchForce = launchForce;
+            heat = 0;
         }
     }
 
     public override void Start()
     {
         heatBar = weaponUI.transform.Find("HeatBackground").transform.Find("HeatBar").GetComponent<Image>();
-        timeLastFired = 0;
+        timePrimaryLastFired = 0;
+        timeAlternateLastFired = 0;
+        heat = 0;
         primaryIsHeld = false;
         alternateIsHeld = false;
     }
@@ -66,7 +95,10 @@ public class Chaingun : Weapon
 
     public override void AlternateFire(InputAction.CallbackContext context)
     {
-
+        if (context.started)
+        {
+            FireHeatsink();
+        }
     }
 
     public override void Update()

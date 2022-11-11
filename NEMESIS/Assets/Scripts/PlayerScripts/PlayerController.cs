@@ -169,7 +169,9 @@ public class PlayerController : MonoBehaviour
 
         alternateFire = _playerControls.Player.AltFire;
         alternateFire.Enable();
+        alternateFire.started += AlternateFire;
         alternateFire.performed += AlternateFire;
+        alternateFire.canceled += AlternateFire;
 
         slot1 = _playerControls.Player.Weapon1;
         slot1.Enable();

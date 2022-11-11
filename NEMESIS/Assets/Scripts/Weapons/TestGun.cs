@@ -7,6 +7,7 @@ using UnityEngine.InputSystem.Interactions;
 [CreateAssetMenu()]
 public class TestGun : Weapon
 {
+    [SerializeField] float primaryRefireDelay;
     [SerializeField] string primaryTapDebugText;
     [SerializeField] string primaryHoldDebugText;
     [SerializeField] string primaryHeldDebugText;
@@ -29,10 +30,10 @@ public class TestGun : Weapon
         //Debug.Log("Firing, Target Time is: " + timeLastFired);
         //Debug.Log("Firing, Message is: " + debugMessage);
 
-        if (Time.time >= timeLastFired)
+        if (Time.time >= timePrimaryLastFired)
         {
             Debug.Log(debugMessage);
-            timeLastFired = Time.time+refireDelay;
+            timePrimaryLastFired = Time.time+primaryRefireDelay;
         }
     }
 

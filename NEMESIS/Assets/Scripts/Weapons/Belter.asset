@@ -17,8 +17,8 @@ MonoBehaviour:
   spinalFirePoint: {fileID: 0}
   weaponUI: {fileID: 0}
   fireSFX: []
-  refireDelay: 0.1
-  timeLastFired: 2.2011979
+  timePrimaryLastFired: 39.716248
+  timeAlternateLastFired: 0
   primaryIsHeld: 0
   alternateIsHeld: 0
   projectilePoolSize: 0
@@ -28,4 +28,11 @@ MonoBehaviour:
   heatDispersion: 50.37
   heatDispersionRecovery: 37.98
   heatSlowdown: 2
-  realHeatDispersion: 50.37
+  primaryRefireDelay: 0.12
+  realHeatDispersion: 29.300653
+  heatSinkPrefab: {fileID: 5696733050966279001, guid: 1c1ceadd160c1f34c9c99d42c0840f26, type: 3}
+  launchForce: 1200
+  damageAtMaxHeat: 50
+  radiusAtMaxHeat: 20
+  forceAtMaxHeat: 150
+  alternateRefireDelay: 4

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class Projectile : MonoBehaviour
 {
     public string[] targetTags;
@@ -12,6 +12,8 @@ public class Projectile : MonoBehaviour
     float lifeRemaining;
     public float maxDistance;
     public float pierceCount;
+
+    public string causeOfDeath;
 
     private Rigidbody2D rb;
     private void Start()
@@ -37,25 +39,22 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        foreach (string tag in targetTags)
+        if (targetTags.Contains(collision.tag))
         {
-            if (collision.CompareTag(tag))
+            GameObject targetObject = collision.gameObject;
+            if(targetObject.TryGetComponent(out Health targetHealth))
             {
-                GameObject targetObject = collision.gameObject;
-                if(targetObject.TryGetComponent(out Health targetHealth))
-                {
-                    targetHealth.ModifyHealth(-damage);
-                    collision.attachedRigidbody.AddForce(rb.velocity.normalized * impactForce);
-                    --pierceCount;
-                    if (pierceCount <= 0)
-                    {
-                        Deactivate();
-                    }
-                }
-                else
+                targetHealth.DamageHealth(damage, causeOfDeath);
+                collision.attachedRigidbody.AddForce(rb.velocity.normalized * impactForce);
+                --pierceCount;
+                if (pierceCount <= 0)
                 {
                     Deactivate();
                 }
+            }
+            else
+            {
+                Deactivate();
             }
         }
     }
