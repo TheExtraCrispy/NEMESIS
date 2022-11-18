@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SwarmerStats
   m_EditorClassIdentifier: 
   health: 20
-  score: 10
+  score: 12

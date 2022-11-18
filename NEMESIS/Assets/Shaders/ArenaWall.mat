@@ -42,12 +42,16 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BorderThickness: 0.1
-    - _CornerRadius: 0.09
-    - _FadeRadius: 0.19
+    - _BorderFactor: 0.938
+    - _BorderThickness: 1.83
+    - _CornerRadius: 0.07
+    - _FadeRadius: 0.82
+    - _QueueControl: 0
+    - _QueueOffset: 0
     - _ScrollSpeedHorizontal: 0.04
     - _ScrollSpeedVertical: 0.05
-    - _Tiling: 0.24
+    - _Tiling: 0.59
+    - _scale: 0
     m_Colors:
     - _BorderColor: {r: 0, g: 7.120418, b: 16, a: 1}
     - _Color: {r: 0, g: 0.37256697, b: 1.9766746, a: 0.3529412}

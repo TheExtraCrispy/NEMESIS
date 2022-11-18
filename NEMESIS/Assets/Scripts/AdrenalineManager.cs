@@ -106,7 +106,7 @@ public class AdrenalineManager : MonoBehaviour
         }
         else if (adrenaline >= 20 && adrenaline < 40)
         {
-            rank = "<color=#51FF42><size=40>C</size>AN'T THINK OF A RANK FOR C";
+            rank = "<color=#51FF42><size=40>C</size>APTAIN";
         }
         else if (adrenaline >= 40 && adrenaline < 60)
         {
@@ -118,7 +118,7 @@ public class AdrenalineManager : MonoBehaviour
         }
         else
         {
-            rank = "<color=red><size=35><mspace=25>NEMESIS";
+            rank = "<color=red><size=30><mspace=20>NEMESIS";
         }
 
         rankText.text = rank;

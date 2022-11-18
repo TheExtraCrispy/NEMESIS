@@ -17,19 +17,19 @@ MonoBehaviour:
   spinalFirePoint: {fileID: 0}
   weaponUI: {fileID: 0}
   fireSFX: []
-  timePrimaryLastFired: 39.716248
+  timePrimaryLastFired: 15.228314
   timeAlternateLastFired: 0
   primaryIsHeld: 0
   alternateIsHeld: 0
   projectilePoolSize: 0
-  bullet: {fileID: 6911985153680778331, guid: c4a56ed055ca62e4ab3e6a5b509a6239, type: 3}
+  bullet: {fileID: 7767363844862448841, guid: 6e8ab4440551e1c4ea4ee9cecc58479c, type: 3}
   heatPerShot: 2.4
   heatMax: 100
   heatDispersion: 50.37
   heatDispersionRecovery: 37.98
   heatSlowdown: 2
   primaryRefireDelay: 0.12
-  realHeatDispersion: 29.300653
+  realHeatDispersion: 50.37
   heatSinkPrefab: {fileID: 5696733050966279001, guid: 1c1ceadd160c1f34c9c99d42c0840f26, type: 3}
   launchForce: 1200
   damageAtMaxHeat: 50

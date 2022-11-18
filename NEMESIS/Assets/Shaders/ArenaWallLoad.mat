@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ArenaWallLoad
+  m_Shader: {fileID: -6465566751694194690, guid: 9bd3ef405f18db043af5e4f723a0f30f, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_92c34b2b82534d318297f35ac385587b_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 0c25c06923e55374e848536b296fc7c1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BorderFactor: 0.965
+    - _CornerRadius: 0.08
+    - _DissolveFactor: 30
+    - _FadeRadius: 0.52
+    - _NoiseStrength: 1
+    - _ScrollSpeedHorizontal: 0.015
+    - _ScrollSpeedVertical: 0.01
+    - _Tiling: 0.018
+    - _scale: 0
+    - _yCutoff: 0.41
+    m_Colors:
+    - _BorderColor: {r: 0, g: 0.94280905, b: 2.1185474, a: 0.2313726}
+    - _Color: {r: 0, g: 1.772549, b: 4, a: 0.2313726}
+  m_BuildTextureStacks: []

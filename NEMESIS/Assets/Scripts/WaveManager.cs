@@ -74,7 +74,7 @@ public class WaveManager : MonoBehaviour
     private void OnEnemyDeath(object sender, DeathContext context)
     {
         --enemiesRemaining;
-        availablePoints += Mathf.CeilToInt(context.rawScore*1.25f);
+        availablePoints += Mathf.CeilToInt(context.rawScore);
         if (enemiesRemaining <= 0)
         {
             Invoke("SpendPoints", waveDelay);

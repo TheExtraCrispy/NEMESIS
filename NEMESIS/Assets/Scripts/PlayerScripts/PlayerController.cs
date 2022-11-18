@@ -209,6 +209,7 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         _scheme = "Keyboard&Mouse";
+        rb.velocity = new Vector2(0, 100);
     }
     private void Update()
     {

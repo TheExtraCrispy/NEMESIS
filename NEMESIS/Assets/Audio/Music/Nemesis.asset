@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0632b9fdd870a1f4a8a7787910a30137, type: 3}
+  m_Name: Nemesis
+  m_EditorClassIdentifier: 
+  intro: {fileID: 8300000, guid: 4fefcbc918166a243b59e729b0eed052, type: 3}
+  loopLoud: {fileID: 8300000, guid: 675b72103c5c9ac49b34759202cab868, type: 3}
+  loopSoft: {fileID: 0}
+  outro: {fileID: 0}
+  playIntro: 1
+  playOutro: 0
+  loop: 1
+  loudAndSoft: 0
+  volume: 1
+  source: {fileID: 0}
